@@ -1374,18 +1374,6 @@ booktitle = {Bayes 250}
   year={2014}
 }
 
-@article{Le2016,
-archivePrefix = {arXiv},
-arxivId = {1610.09900},
-author = {Le, Tuan Anh and Baydin, Atilim Gunes and Wood, Frank},
-eprint = {1610.09900},
-journal = {AISTATS 2017},
-mendeley-groups = {Probabilistic programming Frank},
-title = {{Inference Compilation and Universal Probabilistic Programming}},
-url = {http://arxiv.org/abs/1610.09900},
-year = {2016}
-}
-
 @inproceedings{johnson2016svae,
   booktitle = {Neural Information Processing Systems},
   title = {Composing graphical models with neural networks for structured representations and fast inference},
@@ -1628,7 +1616,7 @@ archivePrefix = {arXiv},
 }
 
 @inproceedings{rainforth2016bopp,
-	title={Bayesian optimization for probabilistic programs},
+	title={Bayesian {O}ptimization for {P}robabilistic {P}rograms},
 	author={Rainforth, Tom and Le, Tuan Anh and van de Meent, Jan-Willem and Osborne, Michael A and Wood, Frank},
 	booktitle={Advances in Neural Information Processing Systems},
 	pages={280--288},
@@ -1636,14 +1624,14 @@ archivePrefix = {arXiv},
 }
 
 @inproceedings{Golinski2018uai,
-	title={Amortized Monte Carlo Integration},
+	title={Amortized {M}onte {C}arlo {I}ntegration},
 	author={Goli\'{n}ski, Adam and Teh, Yee Whye and Wood, Frank and Rainforth, Tom},
 	booktitle={UAI 2018 Workshop on Uncertainty in Deep Learning},
 	year={2018}
 }
 
 @inproceedings{Golinski2018probprog,
-	title={Amortized Monte Carlo Integration},
+	title={Amortized {M}onte {C}arlo {I}ntegration},
 	author={Goli\'{n}ski, Adam and Teh, Yee Whye and Wood, Frank and Rainforth, Tom},
 	booktitle={PROBPROG 2018},
 	year={2018}
@@ -1667,8 +1655,299 @@ archivePrefix = {arXiv},
 }
 
 @inproceedings{ZinkovEM,
-	title={Automating Expectation Maximixation},
+	title={Automating {E}xpectation {M}aximization},
 	author={Zinkov, Robert},
 	booktitle={NIPS 2017 Workshop on Advances in Approximate Bayesian Inference},
 	year={2017}
+}
+
+@ARTICLE{EM,
+    author = {A. P. Dempster and N. M. Laird and D. B. Rubin},
+    title = {Maximum likelihood from incomplete data via the {EM} algorithm},
+    journal = {JOURNAL OF THE ROYAL STATISTICAL SOCIETY, SERIES B},
+    year = {1977},
+    volume = {39},
+    number = {1},
+    pages = {1--38}
+}
+
+@article{Stan,
+   author = {Bob Carpenter and Andrew Gelman and Matthew Hoffman and Daniel Lee and Ben Goodrich and Michael Betancourt and Marcus Brubaker and Jiqiang Guo and Peter Li and Allen Riddell},
+   title = {Stan: A Probabilistic Programming Language},
+   journal = {Journal of Statistical Software, Articles},
+   volume = {76},
+   number = {1},
+   year = {2017},
+   keywords = {probabilistic programming; Bayesian inference; algorithmic differentiation; Stan},
+   abstract = {Stan is a probabilistic programming language for specifying statistical models. A Stan program imperatively defines a log probability function over parameters conditioned on specified data and constants. As of version 2.14.0, Stan provides full Bayesian inference for continuous-variable models through Markov chain Monte Carlo methods such as the No-U-Turn sampler, an adaptive form of Hamiltonian Monte Carlo sampling. Penalized maximum likelihood estimates are calculated using optimization methods such as the limited memory Broyden-Fletcher-Goldfarb-Shanno algorithm. Stan is also a platform for computing log densities and their gradients and Hessians, which can be used in alternative algorithms such as variational Bayes, expectation propagation, and marginal inference using approximate integration. To this end, Stan is set up so that the densities, gradients, and Hessians, along with intermediate quantities of the algorithm such as acceptance probabilities, are easily accessible. Stan can be called from the command line using the cmdstan package, through R using the rstan package, and through Python using the pystan package. All three interfaces support sampling and optimization-based inference with diagnostics and posterior analysis. rstan and pystan also provide access to log probabilities, gradients, Hessians, parameter transforms, and specialized plotting.},
+   issn = {1548-7660},
+   pages = {1--32},
+   doi = {10.18637/jss.v076.i01},
+   url = {https://www.jstatsoft.org/v076/i01}
+}
+
+@misc{InferNET, 
+author = "Minka, T. and Winn, J.M. and Guiver, J.P. and Zaykov, Y. and Fabian, D. and  Bronskill, J.",
+title = {{Infer.NET 2.7}},
+year = 2018,
+note = {Microsoft Research Cambridge. http://research.microsoft.com/infernet}
+}
+@INPROCEEDINGS{Kulkarni2015,
+author={T. D. Kulkarni and P. Kohli and J. B. Tenenbaum and V. Mansinghka},
+booktitle={2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+title={Picture: A probabilistic programming language for scene perception},
+year={2015},
+pages={4390-4399},
+keywords={Monte Carlo methods;computer vision;image matching;image reconstruction;inference mechanisms;pose estimation;programming languages;statistical analysis;3D face analysis;3D human pose estimation;3D object reconstruction;Picture language;analysis-by-synthesis approach;computer vision;fast general-purpose inference machinery;generative vision models;hypothesize-and-test Monte Carlo methods;image matching;probabilistic modeling;probabilistic programming language;scene perception;scene understanding;statistical learning;stochastic scene language;Analytical models;Cameras;Nose;Probabilistic logic;Proposals;Rendering (computer graphics);Shape},
+doi={10.1109/CVPR.2015.7299068},
+ISSN={1063-6919},
+month={June},}
+
+@ARTICLE{biips,
+   author = {{Todeschini}, A. and {Caron}, F. and {Fuentes}, M. and {Legrand}, P. and
+	{Del Moral}, P.},
+    title = "{Biips: Software for Bayesian Inference with Interacting Particle Systems}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1412.3779},
+ primaryClass = "stat.CO",
+ keywords = {Statistics - Computation},
+     year = 2014,
+    month = dec,
+   adsurl = {http://adsabs.harvard.edu/abs/2014arXiv1412.3779T},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@article{clojure,
+	title = {The Clojure Programming Language},
+	author = {Hickey, Rich},
+	journal = {Proceedings of the 2008 Symposium on Dynamic Languages},
+	year = {2008},
+	publisher = {ACM},
+}
+
+@article{spreadsheet,
+abstract = {Spreadsheet workbook contents are simple programs. Because of this, probabilistic programming techniques can be used to perform Bayesian inversion of spreadsheet computations. What is more, existing execution engines in spreadsheet applications such as Microsoft Excel can be made to do this using only built-in functionality. We demonstrate this by developing a native Excel implementation of both a particle Markov Chain Monte Carlo variant and black-box variational inference for spreadsheet probabilistic programming. The resulting engine performs probabilistically coherent inference over spreadsheet computations, notably including spreadsheets that include user-defined black-box functions. Spreadsheet engines that choose to integrate the functionality we describe in this paper will give their users the ability to both easily develop probabilistic models and maintain them over time by including actuals via a simple user-interface mechanism. For spreadsheet end-users this would mean having access to efficient and probabilistically coherent probabilistic modeling and inference for use in all kinds of decision making under uncertainty.},
+archivePrefix = {arXiv},
+  journal = {ArXiv e-prints},
+arxivId = {1606.04216},
+author = {Wu, Mike and Perov, Yura and Wood, Frank and Yang, Hongseok},
+eprint = {1606.04216},
+file = {:Users/adamg/Documents/Mendeley Desktop/Spreadsheet Probabilistic Programming - Wu et al. - 2016.pdf:pdf},
+title = {{Spreadsheet Probabilistic Programming}},
+url = {http://arxiv.org/abs/1606.04216},
+year = {2016}
+}
+
+
+@misc{transpiler-def,
+ author = {Kuper, Lindsey},
+ year = {2017},
+  title = {What do people mean when they say "transpiler"?},
+  howpublished = {\url{http://composition.al/blog/2017/07/30/what-do-people-mean-when-they-say-transpiler/}},
+  note = {Accessed: 2017-09-18}
+}
+
+@book{ANTLR,
+ author = {Parr, Terence},
+ title = {The Definitive ANTLR 4 Reference},
+ year = {2013},
+ isbn = {1934356999, 9781934356999},
+ edition = {2nd},
+ publisher = {Pragmatic Bookshelf},
+}
+
+@manual{JAGSmanual,
+ author = {Plummer, Martyn},
+ title = {JAGS Version 4.3.0 user manual},
+ year = {2017}
+}
+
+@book{practical-pp,
+ author = {Pfeffer, Avi},
+ title = {Practical Probabilistic Programming},
+ year = {2016},
+ isbn = {1617292338, 9781617292330},
+ edition = {1st},
+ publisher = {Manning Publications Co.},
+ address = {Greenwich, CT, USA},
+}
+
+@article{anglican,
+  title = {Design and Implementation of Probabilistic Programming Language Anglican},
+  author = {Tolpin, David and van de Meent, Jan Willem and Yang, Hongseok and Wood, Frank},
+  journal = {arXiv preprint arXiv:1608.05263},
+  year = {2016}
+}
+
+@article{Moore2017,
+  author    = {David A. Moore and
+               Stuart J. Russell},
+  title     = {Signal-based Bayesian Seismic Monitoring},
+  journal   = {CoRR},
+  volume    = {abs/1703.00561},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1703.00561},
+  timestamp = {Wed, 07 Jun 2017 14:41:34 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/MooreR17},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@ARTICLE{TrueSkill,
+   author = {{Borgstr{\"o}m}, J. and {Gordon}, A.~D and {Greenberg}, M. and
+	{Margetson}, J. and {Van Gael}, J.},
+    title = "{Measure Transformer Semantics for Bayesian Machine Learning}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1308.0689},
+ primaryClass = "cs.LO",
+ keywords = {Computer Science - Logic in Computer Science, Computer Science - Artificial Intelligence, Computer Science - Programming Languages},
+     year = 2013,
+    month = aug,
+   adsurl = {http://adsabs.harvard.edu/abs/2013arXiv1308.0689B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@Article{pp-tutorial,
+author = {{Wood Group}},
+title = {{A Tutorial on Probabilistic Programming [work in progress]}},
+year = {2017},
+journal = {Found. Trends Mach. Learn.},
+publisher = {Now Publishers Inc.},
+address = {Hanover, MA, USA},
+key = {{$\!\!$}} ,
+}
+
+@inproceedings{Paige2016,
+  title = {Inference Networks for Sequential {M}onte {C}arlo in Graphical Models},
+  author = {Paige, B. and Wood, F.},
+  booktitle = {Proceedings of the 33rd International Conference on Machine Learning},
+  series = {JMLR},
+  volume = {48},
+  year = {2016}
+}
+
+@article{amortized-inference,
+abstract = {Recent studies of probabilistic reasoning have postulated general-purpose inference algorithms that can be used to answer arbitrary queries. These algorithms are memoryless, in the sense that each query is processed independently, without reuse of earlier computation. We argue that the brain operates in the setting of amortized inference, where numerous related queries must be answered (e.g., recognizing a scene from multiple viewpoints); in this setting, memoryless algorithms can be computationally wasteful. We propose a simple form of flexible reuse, according to which shared inferences are cached and composed together to answer new queries. We present experimental evidence that humans exploit this form of reuse: the answer to a complex query can be systematically predicted from a person's response to a simpler query if the simpler query was presented first and entails a sub-inference (i.e., a sub-component of the more complex query). People are also faster at answering a complex query when it is preceded by a sub-inference. Our results suggest that the astonishing efficiency of human probabilistic reasoning may be supported by interactions between inference and memory. Keywords:},
+author = {Gershman, Samuel J and Goodman, Noah D},
+file = {:Users/adamg/Documents/Mendeley Desktop/Amortized Inference in Probabilistic Reasoning - Gershman, Goodman - 2014.pdf:pdf},
+journal = {Proceedings of the 36th Annual Conference of the Cognitive Science Society (CogSci 2014)},
+keywords = {Bayesian inference,induction,memory},
+pages = {517--522},
+title = {{Amortized Inference in Probabilistic Reasoning}},
+volume = {1},
+year = {2014}
+}
+
+@inproceedings{AIstats2014,
+  author = {Wood, F. and van de Meent, J. W. and Mansinghka, V.},
+  booktitle = {Artificial Intelligence and Statistics},
+  title = {A New Approach to Probabilistic Programming Inference},
+  pages = {1024--1032},
+  year = {2014}
+}
+
+
+@MISC{JAGS,
+    author = {Martyn Plummer},
+    title = {{JAGS}: A program for analysis of Bayesian graphical models using Gibbs sampling},
+    year = {2003}
+}
+
+@article {BUGSproject,
+author = {Lunn, David and Spiegelhalter, David and Thomas, Andrew and Best, Nicky},
+title = {The {BUGS} project: Evolution, critique and future directions},
+journal = {Statistics in Medicine},
+volume = {28},
+number = {25},
+publisher = {John Wiley & Sons, Ltd.},
+issn = {1097-0258},
+url = {http://dx.doi.org/10.1002/sim.3680},
+doi = {10.1002/sim.3680},
+pages = {3049--3067},
+keywords = {BUGS, WinBUGS, OpenBUGS, Bayesian modelling, graphical models},
+year = {2009},
+}
+
+@Article{WinBUGS,
+author="Lunn, David
+and Thomas, Andrew
+and Best, Nicky
+and Spiegelhalter, David",
+title="{WinBUGS} - A Bayesian modelling framework: Concepts, structure, and extensibility",
+journal="Statistics and Computing",
+year="2000",
+month="Oct",
+day="01",
+volume="10",
+number="4",
+pages="325--337",
+issn="1573-1375",
+doi="10.1023/A:1008929526011",
+url="http://dx.doi.org/10.1023/A:1008929526011"
+}
+
+
+@article{venture,
+author      = {Vikash K. Mansinghka and Daniel Selsam and Yura Perov},
+title       = {Venture: A higher-order probabilistic programming platform with programmable inference},
+year        = {2014},
+journal     = {arXiv preprint},
+volume      = {arXiv:1404.0099},
+url_paper   = {https://arxiv.org/pdf/1404.0099.pdf},
+url_link    = {https://arxiv.org/abs/1404.0099},
+}
+
+@article{NUTS,
+ author = {Homan, Matthew D. and Gelman, Andrew},
+ title = {The No-U-turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo},
+ journal = {J. Mach. Learn. Res.},
+ issue_date = {January 2014},
+ volume = {15},
+ number = {1},
+ month = jan,
+ year = {2014},
+ issn = {1532-4435},
+ pages = {1593--1623},
+ numpages = {31},
+ url = {http://dl.acm.org/citation.cfm?id=2627435.2638586},
+ acmid = {2638586},
+ publisher = {JMLR.org},
+ keywords = {Bayesian inference, Hamiltonian Monte Carlo, Markov chain Monte Carlo, adaptive Monte Carlo, dual averaging},
+} 
+
+@article{HMC,
+      author         = "Duane, S. and Kennedy, A. D. and Pendleton, B. J. and
+                        Roweth, D.",
+      title          = "{Hybrid Monte Carlo}",
+      journal        = "Phys. Lett.",
+      volume         = "B195",
+      year           = "1987",
+      pages          = "216-222",
+      doi            = "10.1016/0370-2693(87)91197-X",
+      SLACcitation   = "%%CITATION = PHLTA,B195,216;%%"
+}
+
+@inproceedings{EP,
+ author = {Minka, Thomas P.},
+ title = {Expectation Propagation for Approximate Bayesian Inference},
+ booktitle = {Proceedings of the 17th Conference in Uncertainty in Artificial Intelligence},
+ series = {UAI '01},
+ year = {2001},
+ isbn = {1-55860-800-1},
+ pages = {362--369},
+ numpages = {8},
+ url = {http://dl.acm.org/citation.cfm?id=647235.720257},
+ acmid = {720257},
+ publisher = {Morgan Kaufmann Publishers Inc.},
+ address = {San Francisco, CA, USA},
+} 
+
+@ARTICLE{variationalmessagepassing,
+    author = {John Winn and Christopher M. Bishop and Tommi Jaakkola},
+    title = {Variational message passing},
+    journal = {Journal of Machine Learning Research},
+    year = {2005},
+    volume = {6},
+    pages = {661--694}
 }
