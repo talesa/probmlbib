@@ -6,7 +6,7 @@ Adapted this model for bibliography management from the [OVAL](https://www.robot
 
 Just set the environment variable `BIBINPUTS` to have latex look for the `.bib` file in the right directory by default. For example, you can set `export BIBINPUTS=$HOME/workspace/bibliography` if the git repository is in  `$HOME/workspace/bibliography`.
 
-The default way to use the bibliorgraphy is `\bibliography{standardstrings, bibliography}`.
+The default way to use the bibliorgraphy is `\bibliography{standardstrings,bibliography}` (surprisingly it seems to matter that there is not space after the comma!).
 
 ## General Rules
 
@@ -27,7 +27,7 @@ The default way to use the bibliorgraphy is `\bibliography{standardstrings, bibl
 
   1. The author field must be in the form `{Surname1, FirstName1 and Surname2, FirstName2 and Surname3, FirstName3}`
   2. For the conferences, journals etc., use the journal id that links to a string in `standardstrings.bib`, `shortstrings.bib` or `longstrings.bib`.
-     For example, `journal = nips` will use the link `@string{nips = "Advances in Neural Information Processing Systems"}` if you have just `\bibliography{standardstrings, bibliography}` in your tex file, or `@string{nips = "NIPS"}` if you have `\bibliography{standardstrings, shortstrings, bibliography}` in your tex file, or the link `@string{nips = "Advances in Neural Information Processing Systems (NIPS)"}` if you have `\bibliography{standardstrings, longstrings, bibliography}`. 
+     For example, `journal = nips` will use the link `@string{nips = "Advances in Neural Information Processing Systems"}` if you have just `\bibliography{standardstrings,bibliography}` in your tex file, or `@string{nips = "NIPS"}` if you have `\bibliography{standardstrings,shortstrings,bibliography}` in your tex file, or the link `@string{nips = "Advances in Neural Information Processing Systems (NIPS)"}` if you have `\bibliography{standardstrings,longstrings,bibliography}`. 
      Add new ids if they are not there yet.
 
   3. Do not use tabs.
