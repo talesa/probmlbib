@@ -1,6 +1,10 @@
-# OVAL Bibliography
+# Probabilistic ML Bibliography
 
-Adapted from the VGG model.
+Adapted this model for bibliography management from the [OVAL](https://www.robots.ox.ac.uk/~oval/) & [VGG](https://www.robots.ox.ac.uk/~vgg/) groups, shout-out to [Leo Berrada](http://www.robots.ox.ac.uk/~lberrada/) for sharing this!
+
+## How do I use the shared bibliography in my workflow?
+
+Just set the environment variable `BIBINPUTS` to have latex look for the `.bib` file in the right directory by default. For example, you can set `export BIBINPUTS=$HOME/workspace/bibliography` if the git repository is in  `$HOME/workspace/bibliography`.
 
 ## General Rules
 
@@ -12,16 +16,15 @@ Adapted from the VGG model.
     in the year than a previous entry, the new paper (not the most recently
     published) still goes at the end.
 
- 2. Find the correct place in `oval.bib` (order is alphabetic by bibref key)
+ 2. Find the correct place in `bibliography.bib` (order is alphabetic by bibref key)
     and insert your bibentry.
 
- 3. Verify that the bibfile is still working (e.g. run the `checkbib.sh`
-    script or compile your LaTeX document) and commit the change.
+ 3. Verify that the bibfile is still working (e.g. compile your LaTeX document) and commit the change.
 
 ## Style Guidelines:
 
   1. The author field must be in the form `{Surname1, FirstName1 and Surname2, FirstName2 and Surname3, FirstName3}`
-  2. For the conferences, journals etc., use the journal id that links to a string in `shortstrings.bib` or `longstrings.bib` (e.g. `journal = nips` will use the link `@string{nips = "NIPS"}` if you have `\bibliography{shortstrings, oval}` in your tex file, or the link `@string{nips = "Advances in Neural Information Processing Systems"}` if you have `\bibliography{longstrings, oval}`). Add new ids if they are not there yet (at the moment there are mostly computer vision venues since it comes from the VGG).
+  2. For the conferences, journals etc., use the journal id that links to a string in `shortstrings.bib` or `longstrings.bib` (e.g. `journal = nips` will use the link `@string{nips = "NIPS"}` if you have `\bibliography{shortstrings, bibliography}` in your tex file, or the link `@string{nips = "Advances in Neural Information Processing Systems"}` if you have `\bibliography{longstrings, bibliography}`). Add new ids if they are not there yet.
 
   3. Do not use tabs.
 
@@ -50,8 +53,4 @@ NB: In some corner cases, one might need to use more specific entries, e.g. `InC
 
 ## Tips
 
-* You can set the environment variable `BIBINPUTS` to have latex look for the `.bib` file in the right directory by default. For example, you can set `export BIBINPUTS=$HOME/workspace/bibliography` if the git repository is in  `$HOME/workspace/bibliography`.
-
 * If you want to extract the citations needed (and not the whole database) for your document `mydoc.tex`, you can run `bibexport -o extracted.bib mydoc.aux` to obtain these citations in `extracted.bib`
-
-
