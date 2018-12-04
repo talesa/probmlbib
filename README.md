@@ -10,7 +10,7 @@ There are at least two ways.
 
 The simpler way is to use [git submodules](https://blog.github.com/2016-02-01-working-with-submodules/), i.e. a repo inside a repo.
 This seems to be easier if you collaborate with others on your manuscript since the bibliography is pulled together with your manuscript repo (despite being in a seperate repo).
-Use `git submodule add https://github.com/talesa/probmlbib bibliography` to put this repo inside the repo with your manuscript. 
+Use `git submodule add git@github.com:talesa/probmlbib.git bibliography` to put this repo inside the repo with your manuscript. 
 Then default way to use the bibliography is `\bibliography{bibliography/standardstrings,bibliography/bibliography,bibliography/dirty}` (surprisingly it seems to matter that there is not space after the commas!). 
 After you modify the `*.bib` files, go inside the `bibliography` folder and add, commit & push changes to this repo (seperately from the main manuscript repo). 
 Then go to your manuscript repo and add, commit & push the `bibliography` folder, just the information about bibliography repo commit id is kept.
