@@ -1,12 +1,24 @@
 # Probabilistic ML Bibliography
 
-Adapted this model for bibliography management from the [OVAL](https://www.robots.ox.ac.uk/~oval/) & [VGG](https://www.robots.ox.ac.uk/~vgg/) groups, shout-out to [Leo Berrada](http://www.robots.ox.ac.uk/~lberrada/) for sharing this!
+I've adapted this model for shared bibliography management from the [OVAL](https://www.robots.ox.ac.uk/~oval/) & [VGG](https://www.robots.ox.ac.uk/~vgg/) groups, shout-out to [Leo Berrada](http://www.robots.ox.ac.uk/~lberrada/) for sharing this!
+
+If you're my coauthor and you don't have time to fill this bibliography as intended please put your references into `dirty.bib`, I'll take care of them in due time.
 
 ## How do I use the shared bibliography in my workflow?
 
-Just set the environment variable `BIBINPUTS` to have latex look for the `.bib` file in the right directory by default. For example, you can set `export BIBINPUTS=$HOME/workspace/bibliography` if the git repository is in  `$HOME/workspace/bibliography`.
+There are at least two ways.
 
-The default way to use the bibliorgraphy is `\bibliography{standardstrings,bibliography}` (surprisingly it seems to matter that there is not space after the comma!).
+The simpler way is to use [git submodules](https://blog.github.com/2016-02-01-working-with-submodules/), i.e. a repo inside a repo.
+This seems to be easier if you collaborate with others on your manuscript since the bibliography is pulled together with your manuscript repo (despite being in a seperate repo).
+Use `git submodule add https://github.com/talesa/probmlbib bibliography` to put this repo inside the repo with your manuscript. 
+Then default way to use the bibliography is `\bibliography{bibliography/standardstrings,bibliography/bibliography,bibliography/dirty}` (surprisingly it seems to matter that there is not space after the commas!). 
+After you modify the `*.bib` files, go inside the `bibliography` folder and add, commit & push changes to this repo (seperately from the main manuscript repo). 
+Then go to your manuscript repo and add, commit & push the `bibliography` folder, just the information about bibliography repo commit id is kept.
+
+The other, more fancy, but seemingly less practical when working with others, way is to set the environment variable `BIBINPUTS` to have latex look for the `*.bib` files in the right directory by default. 
+For example, you can set `export BIBINPUTS=$HOME/workspace/probmlbib` if the git repository is in  `$HOME/workspace/probmlbib`.
+Then the default way to use the bibliography is `\bibliography{standardstrings,bibliography,dirty}`.
+The advantage of this method is that you don't need a submodule inside the manuscript repo.
 
 ## General Rules
 
