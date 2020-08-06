@@ -39,7 +39,7 @@ The advantage of this method is that you don't need a submodule inside the manus
 
   1. The author field must be in the form `{Surname1, FirstName1 and Surname2, FirstName2 and Surname3, FirstName3}`
   2. For the conferences, journals etc., use the journal id that links to a string in `standardstrings.bib`, `shortstrings.bib` or `longstrings.bib`.
-     For example, `journal = nips` will use the link `@string{nips = "Advances in Neural Information Processing Systems"}` if you have just `\bibliography{standardstrings,bibliography}` in your tex file, or `@string{nips = "NIPS"}` if you have `\bibliography{standardstrings,shortstrings,bibliography}` in your tex file, or the link `@string{nips = "Advances in Neural Information Processing Systems (NIPS)"}` if you have `\bibliography{standardstrings,longstrings,bibliography}`. 
+     For example, `journal = neurips` will use the link `@string{neurips = "Advances in Neural Information Processing Systems"}` if you have just `\bibliography{standardstrings,bibliography}` in your tex file, or `@string{neurips = "NeurIPS"}` if you have `\bibliography{standardstrings,shortstrings,bibliography}` in your tex file, or the link `@string{neurips = "Advances in Neural Information Processing Systems (NeurIPS)"}` if you have `\bibliography{standardstrings,longstrings,bibliography}`. 
      Add new ids if they are not there yet.
 
   3. Do not use tabs.
